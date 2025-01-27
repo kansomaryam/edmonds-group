@@ -1,8 +1,8 @@
 /* General Styles for Logos Section */
 .custom-section.logos {
     padding: 3rem 1rem;
-    color: #333; /* Default text color */
-    background-color: transparent; /* Remove default background */
+    color: #333; 
+    background-color: transparent; 
 }
 
 /* Header Styles */
@@ -13,15 +13,15 @@
 }
 
 
-/* Custom Header Size Styles */
+
 
 
 /* Logos Wrapper */
 .custom-section.logos .logos-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center logos */
-    gap: 0.5rem; /* Reduced space between logos */
+    justify-content: center; 
+    gap: 0.5rem; 
 }
 
 /* Individual Logo Styles */
@@ -29,17 +29,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 0 calc(100% / 6 - 0.5rem); /* 6 logos per row with reduced space */
-    max-width: calc(100% / 6 - 0.5rem); /* Ensure logos occupy more space */
+    flex: 1 0 calc(100% / 6 - 0.5rem); 
+    max-width: calc(100% / 6 - 0.5rem); 
     transition: transform 0.3s ease;
 }
 
 
 /* Adjust image size */
 .custom-section.logos .logo-img img {
-    width: 100%; /* Ensure logos use full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Scale image while maintaining aspect ratio */
+    width: 100%; 
+    height: auto;
+    object-fit: contain;
 }
 
 /* Remove Hover Effect for Logos */
@@ -55,15 +55,7 @@
 @media screen and (max-width: 768px) {
     .custom-section.logos .logo-img {
         flex: 1 0 100%;
-        max-width: 100%; /* Ensure it takes up full width on small screens */
-    }
-}
-
-/* Small screen view - 2 logos per row */
-@media screen and (max-width: 480px) {
-    .custom-section.logos .logo-img {
-        flex: 1 0 calc(50% - 1rem); /* 2 logos per row with spacing */
-        max-width: calc(50% - 1rem);
+        max-width: 100%; 
     }
 }
 
@@ -96,5 +88,5 @@
 
 /* Background Color */
 .custom-section.logos {
-    background-color: transparent; /* Default background */
+    background-color: transparent; 
 }

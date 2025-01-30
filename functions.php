@@ -276,6 +276,35 @@ function enqueue_team_member_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_team_member_styles' );
 
+//resources block
+add_action('acf/init', 'register_resources_block');
+function register_resources_block() {
+    acf_register_block_type(array(
+        'name'              => 'resources_block',
+        'title'             => __('Resources Block'),
+        'description'       => __('A custom block to display multiple downloadable resources.'),
+        'render_template'   => 'template-parts/blocks/resources-block.php',
+        'category'          => 'formatting',
+        'icon'              => 'download',
+        'keywords'          => array('resources', 'download', 'pdf'),
+        'enqueue_style'     => get_template_directory_uri() . '/template-parts/components/css/resources.css', 
+    ));
+}
+
+//services section
+add_action('acf/init', 'register_services_block');
+function register_services_block() {
+    acf_register_block_type(array(
+        'name'              => 'services_block',
+        'title'             => __('Services Block'),
+        'description'       => __('A custom block to display services with icons, titles, descriptions, and links.'),
+        'render_template'   => 'template-parts/blocks/services-block.php',
+        'category'          => 'formatting',
+        'icon'              => 'admin-tools', // Use a relevant icon
+        'keywords'          => array('services', 'features', 'offerings'),
+        'enqueue_style'     => get_template_directory_uri() . '/template-parts/components/css/services.css',
+    ));
+}
 
 
 
